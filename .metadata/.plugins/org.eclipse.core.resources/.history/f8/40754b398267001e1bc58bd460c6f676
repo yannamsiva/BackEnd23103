@@ -1,0 +1,19 @@
+package com.shiva.client;
+
+public class StudentClient {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("********************************************************");
+		
+		System.out.println("                     1)AddStudent                       ");
+		System.out.println("                     2)ViewAllStudent                       ");
+		System.out.println("                     3)ViewStudent                       ");
+		System.out.println("                     4)DeleteStudent                       ");
+		System.out.println("                     5)Exit                       ");
+		System.out.println("********************************************************");
+
+	}
+
+}

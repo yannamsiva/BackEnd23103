@@ -1,0 +1,10 @@
+package com.shiva.pojo;
+
+public class Student {
+Integer sno;
+String firstName;
+String lastName;
+String email;
+
+
+}

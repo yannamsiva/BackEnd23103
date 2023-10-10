@@ -1,0 +1,34 @@
+package com.shiva.service.impl;
+
+import java.util.List;
+
+import com.shiva.pojo.Student;
+import com.shiva.service.StudentDAO;
+
+public class StudentDAOImpl implements StudentDAO {
+
+	@Override
+	public String addStudent(Student student) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Student> viewAllStudents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Student viewStudent(Integer sno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteStudent(Integer sno) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

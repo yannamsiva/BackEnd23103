@@ -1,0 +1,61 @@
+package com.shiva.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.shiva.pojo.Student;
+import com.shiva.service.StudentDAO;
+
+public class StudentDAOImpl implements StudentDAO {
+
+	List<Student>addStudents=new ArrayList<>();
+	@Override
+	public String addStudent(Student student) {
+		// TODO Auto-generated method stub
+		addStudents.add(student);
+		String message="";
+		if(addStudents.get(0).getSno()!=0)
+			message="Registration Successfull";
+		else
+			message="Records are not Found";
+		return message;
+	}
+
+	@Override
+	public List<Student> viewAllStudents() {
+		// TODO Auto-generated method stub
+		return addStudents;
+	}
+
+	@Override
+	public Student viewStudent(Integer sno) {
+		// TODO Auto-generated method stub
+		
+		for(Student stu : addStudents)
+		{
+			if(stu.getSno()==sno)
+				return stu;
+		}
+		return null;
+	}
+
+	@Override
+	public void deleteStudent(Integer sno) {
+		// TODO Auto-generated method stub
+		int k=0;
+		for(Student stu : addStudents)
+		{
+			if(stu.getSno()==sno)
+			{
+				addStudents.remove(stu);
+				System.out.println("Student Record deleted Successful");
+				k++;
+				break;
+			}
+			
+		}
+		if(k==0)
+			System.out.println("Record is not Exist");
+	}
+
+}
